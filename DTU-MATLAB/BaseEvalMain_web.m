@@ -1,4 +1,4 @@
-clear all
+ clear all
 close all
 format compact
 clc
@@ -44,7 +44,7 @@ for cIdx=1:length(UsedSets)
         
         tic
         Mesh = plyread(DataInName);
-        Qdata=[Mesh.vertex.x Mesh.vertex.y Mesh.vertex.z]';
+        Qdata=[Mesh.vertex.x Mesh.vertex.y Mesh.vertex.z];
         toc
         
         BaseEval=PointCompareMain(cSet,Qdata,dst,dataPath);
