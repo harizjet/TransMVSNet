@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # run this script in the root path of TransMVSNet
-MVS_TRAINING="./data/data/mvs_training/dtu/" # path to dataset mvs_training
-LOG_DIR="./outputs/dtu_training" # path to checkpoints
+MVS_TRAINING="data/data/mvs_training/dtu/" # path to dataset mvs_training
+LOG_DIR="outputs/dtu_training" # path to checkpoints
 if [ ! -d $LOG_DIR ]; then
 	mkdir -p $LOG_DIR
 fi
@@ -23,4 +23,6 @@ BATCH_SIZE=1
 	--depth_inter_r="4.0,1.0,0.5" \
 	--lrepochs="6,8,12:2" \
 	--dlossw="1.0,1.0,1.0" | tee -a $LOG_DIR/log.txt
+
+read -p "Press any key to close ..."
 	
