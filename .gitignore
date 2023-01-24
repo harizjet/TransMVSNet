@@ -4,3 +4,4 @@ models/__pycache__/
 data/*
 env/*
 outputs/*
+checkpoints/*
